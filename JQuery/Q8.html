@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Q8</title>
+    <script src="jquery-3.7.1.min.js"></script>
+    <script>
+        $(document).ready(function(){
+        $("#applyFilter").click(function(){
+        var value = $("#categoryFilter").val().toLowerCase();
+        $("#myTable tr").filter(function(){
+        $(this).toggle($(this).find('td:nth-child(2)').text().toLowerCase().indexOf(value)>-1)
+        });
+        });
+        });
+        </script>
+        <style>
+        body{
+        background: rgb(87, 193, 205);
+        font-size: 20px;
+        }
+        table {
+        font-family: "sans-serif";
+        border-collapse: collapse;
+        width: 80%;
+        margin-left: 30px;
+        }
+        td,th{
+        border: 3px solid rgb(245, 166, 47);
+        text-align: center;
+        padding: 8px;
+        background-color: rgb(215, 247, 247);
+        color: darkmagenta;
+        }
+        </style>
+        </head>
+        <body>
+        <h2>JOB LISTINGS</h2>
+        <div>
+        <label for="categoryFilter">Filter by Category:</label>
+        <select id="categoryFilter">
+        <option value="Software">Software</option>
+        <option value="Design">Design</option>
+        <option value="Media">Media</option>
+        <option value="Hotel & Travel">Hotel and Travel</option>
+        <option value="Market">Market</option>
+        </select>
+        <button id="applyFilter">Apply Filter</button>
+        </div><br>
+        <table id="myTable">
+        <tr>
+        <th>Sl No.</th>
+        <th>Job Category</th>
+        <th>Job </th>
+        </tr>
+        <tr>
+        <td>1</td>
+        <td>Software</td>
+        <td>ios Developer</td>
+        </tr>
+        <tr>
+        <td>2</td>
+        <td>Software</td>
+        <td>Network Administrator</td>
+        </tr>
+        <tr>
+        <td>3</td>
+        <td>Design</td>
+        <td>Game Designer</td>
+        </tr>
+        <tr>
+        <td>4</td>
+        <td>Hotel & Travel</td>
+        <td>Chef</td>
+        </tr>
+        <tr>
+        <td>5</td>
+        <td>Hotel & Travel</td>
+        <td>Event Planner</td>
+        </tr>
+        <tr>
+        <td>6</td>
+        <td>Design</td>
+        <td>Fashion Designer</td>
+        </tr>
+        <tr>
+        <td>7</td>
+        <td>Design</td>
+        <td>Multimedia Artist</td>
+        </tr>
+        <tr>
+        <td>8</td>
+        <td>Media</td>
+        <td>Journalist</td>
+        </tr>
+        <tr>
+        <td>9</td>
+        <td>Media</td>
+        <td>Content Creator</td>
+        </tr>
+        <tr>
+        <td>10</td>
+        <td>Market</td>
+        <td>Market Research Analyst</td>
+        </tr>
+        <tr>
+        <td>11</td>
+        <td>Software</td>
+        <td>QA Engineer</td>
+        </tr>
+        <tr>
+        <td>12</td>
+        <td>Software</td>
+        <td>UX/UI Designing</td>
+        </tr>
+        <tr>
+        <td>13</td>
+        <td>Hotel & Travel</td>
+        <td>Hotel Manager</td>
+        </tr>
+        <tr>
+        <td>14</td>
+        <td>Market</td>
+        <td>Brand Manager</td>
+        </tr>
+        <tr>
+        <td>15</td>
+        <td>Market</td>
+        <td>Social Media Coordinator</td>
+        </tr>
+        </table>
+</body>
+</html>
