@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register Form</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+    <script>
+        $(document).ready(function(){ 
+window.onbeforeunload = function(){
+return "Submit before closing"
+};
+});
+    </script>
+    <style>
+        body {
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+            background-color: rgb(243,243,243);
+        }
+        .container{
+            border: 2px solid saddlebrown;
+            background-color: aliceblue;
+            font-weight: bold;
+        }
+        input[type=text], input[type=password],input[type=email] {
+width: 100%;
+padding: 15px;
+margin: 5px 0 22px 0;
+display: inline-block;
+border: none;
+background: rgb(118, 200, 236);
+border:1px solid forestgreen ;
+}
+input[type=radio] {
+width:10%;
+padding: 10px;
+}
+input[type=text]:focus, input[type=password]:focus {
+background-color:rgb(0, 255, 234);
+outline: none;
+}
+input[type=submit] {
+background-color: rgb(43, 43, 225);
+color: rgb(138, 231, 8);
+padding: 16px 20px;
+margin: 8px 0;
+font-size: 20px;
+cursor: pointer;
+width: 100%;
+opacity: 0.9;
+}
+input[type=submit] :hover {
+opacity: 0.5;
+}
+h1{
+text-align: center;
+}
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <form action="/action_page.php">
+        <div class="form-group">
+        <h1>Register</h1>
+        <label for="nm">Name</label>
+        <input type="text"placeholder="Enter Name" name="nm" id="nm" required>
+        <label for="gen">Gender</label><br>
+        <input type="radio" name="gen" id="gen" required>Male
+        <input type="radio" name="gen" id="gen" required>Female
+        <br>
+        <label for="add">Address</label>
+        <input type="text" placeholder="Enter Address" name="add" id="add" required>
+        <label for="email">Email</label>
+        <input type="email" placeholder="Enter Email" name="email" id="email" required>
+        <label for="psw">Password</label>
+        <input type="password" placeholder="Enter Password" name="psw" id="psw" required>
+        <input type="submit" value="Submit">
+        <div class="alert alert-danger alert-dismissible fade show">
+        <button type="button" class="close" data-dismiss="alert">&times;</button>
+        ! ! ! Submit before closing the window ! ! !
+        </div>
+        </div>
+        </div>
+        </div>
+        </form>
+</body>
+</html>
